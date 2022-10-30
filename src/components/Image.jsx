@@ -8,6 +8,7 @@ const Images = (props) => {
 
   return (
     <>
+      {/* Popup box container */}
       <div className={`fixed left-1/2 ${popup ? "top-1/2 opacity-100 " : "top-[-150%] opacity-0 "
         } -translate-x-1/2 -translate-y-1/2 w-full h-full bg-slate-900 rounded-md flex justify-center items-center z-40 transition-all duration-300 ease-in-out`}> <IoClose
           className="w-16 h-16 text-white absolute right-0 top-0 z-50"
@@ -15,7 +16,9 @@ const Images = (props) => {
             setPopup(false);
           }}
         />
+        {/* Image shown on popup */}
         <img src={popupData} className="w-full sm:w-5/6 md:w-1/2" /></div>
+      {/* image which display in gallery */}
       <img
         src={props.url.download_url}
         onClick={(e) => {
